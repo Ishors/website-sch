@@ -1,0 +1,333 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: BradleyHand, cursive;
+}
+
+header{
+	background-color:#E4F3F6;
+}
+
+header div{
+	padding: 5px;
+}
+
+#pad{
+	width:auto;
+}
+
+#nav{
+	padding-top:5px;	
+}
+
+
+#sec{
+	width:auto;
+}
+
+div.pan{
+	text-align:center;
+	margin:0;
+}
+
+ul{
+	border: 1px solid white;
+	margin: 10px 5px 10px 5px;
+	padding: 5px;
+}
+
+.acote{
+	display:flex;
+}
+
+#head{
+	font-size:20px;
+	text-align:center;
+	padding:20px;
+	font-weight:bold;
+}
+
+#head a{
+	color:black;
+	text-decoration:none;
+}
+
+
+nav{
+	border: 2px solid black;
+	margin-top: 15px;
+	margin-bottom:15px;
+	background-color:white;
+}
+
+#logo{
+	padding-top:12px;
+}
+
+#head2{
+	width:56%;
+	justify-content:flex-end;
+}
+
+#titre2{
+	font-size:35px;
+	margin:15px;
+}
+
+#tab{
+	margin:15px;
+	width:auto;
+}
+
+#conv1{
+	margin: 15px;
+	padding: 0px; 
+	border: 2px solid rgb(136, 136, 136); 
+	width: auto; 
+	background-color: transparent;
+	text-align:center;
+}
+
+#menu{
+	margin:0;
+}
+ul#menu li.menuitem{
+	padding:5px;
+	display:inline;
+}
+
+ul#menu li.menuitem a{
+	color: black;
+	text-decoration: none;
+}
+ul#menu li.menuitem a:hover{
+	text-decoration:underline;
+}
+
+#panier{
+	border: 1px solid black;
+	width:auto;
+	margin:0;
+}
+
+.bl{
+	border-top: 1px solid black;
+}
+
+table{
+
+	width:100%;
+}
+
+td{
+	padding:15px 5px;
+}
+
+#blank{
+	background-color: white;
+}
+
+#blank1{
+	background-color: white;
+	border-right:4px solid black;
+}
+
+td#table1{
+	width:350px;
+	border-top:4px solid black;
+	border-bottom:2px solid black;
+	border-right:3px solid black;
+	border-left:4px solid black;
+}
+
+td#table2{
+	width:350px;
+	border-top:4px solid black;
+	border-bottom:2px solid black;
+	border-right:3px solid black;
+}
+
+td#table3{
+	width:350px;
+	border-top:4px solid black;
+	border-bottom:2px solid black;
+	border-right:4px solid black;
+}
+
+td#table4{
+	padding:10px;
+	border-left:4px solid black;
+	border-bottom:2px solid black;
+	border-right:3px solid black;
+}
+
+td#table5{
+	border-bottom:2px solid black;
+	border-right:3px solid black;
+}
+
+td#table6{
+	border-bottom:2px solid black;
+	border-right:4px solid black;
+}
+
+td#table7{
+	padding:10px;
+	border-left:4px solid black;
+	border-bottom:4px solid black;
+	border-right:3px solid black;
+}
+
+td#table8{
+	border-bottom:4px solid black;
+	border-right:3px solid black;
+}
+
+td#table9{
+	border-bottom:4px solid black;
+	border-right:4px solid black;
+}
+
+td#table10{
+	border-bottom:4px solid black;
+	border-right:4px solid black;
+}
+
+tr:nth-child(1){
+	background-color: #EEDDB5;
+}
+
+tr:nth-child(2){
+	background-color: #FFF8DC;		
+}
+
+tr:nth-child(3){
+	background-color: #FAEBD7;	
+}
+
+tr:nth-child(4){
+	background-color: #EEDDB5;		
+}
+td a{
+	text-decoration:none;
+	color:black;
+}
+
+.zoom{
+	transition: transform 1s;
+}
+
+.zoom:hover{ 
+    transform: scale(1.5);
+}
+
+#span{
+	flex:1;
+	margin-left:0;
+}
+
+.money{
+	width:100%;
+}
+
+.euro{
+	background-color: white;
+	border: 1px solid #AAAAAA;
+}
+
+#commande{
+	border: 1px solid black;
+	width:auto;
+	margin-left: 5px;
+	text-align:center;
+}
+
+div#commande button:active {
+	box-shadow: -3px -3px;
+}
+
+#bouton{
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 3px 3px;
+	font-size: 20px;
+	margin-top:108px;
+	width:75%;
+}
+
+.check{
+	font-size:10px;
+	margin:8px 45px;
+	text-align:left;
+}
+
+#confirmeButton{
+	visibility:hidden;
+}
+
+#signe{
+	margin:8px 45px;
+}
+
+#arr{
+	font-weight:bold;
+	font-size:20px;	
+}
+
+#myCanvas{
+	margin-top:15px;
+	visibility:hidden;
+}
+
+#valid{
+	text-align:center;
+}
+
+#paie{
+	margin:30px;
+}
+
+#zaldu{
+	text-align:center;
+}
+
+#zalduph{
+	width:100%;
+	height:100%;
+}
+
+@media screen and (max-width :800px){
+section.acote{
+	display:block;
+}
+
+header{
+	font-size:13px;
+}
+
+#head{
+	padding:10px;
+}
+
+#nav{
+	padding-top:0px;	
+}
+
+#commande{
+	border: 1px solid black;
+	width:auto;
+	margin-left: 0px;
+	text-align:center;
+}
+
+#bouton{
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 3px 3px;
+	font-size: 20px;
+	margin-top:50px;
+	width:75%;
+}
+
+}
+

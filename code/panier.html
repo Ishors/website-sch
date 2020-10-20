@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+	<head>
+		<meta charset="utf-8" />
+		<title>Votre panier BDE ESTIA</title>
+		<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="ressources/bde-estia-logo.jpg" rel="icon" type="image/jpg" media="all" sizes="114x114"/>
+	</head>
+	
+	<body>
+		<header id ="pad" class="acote">
+			<div id="logo">
+				<a href="index.html"><img src="ressources/bde-estia-logo.jpg" alt="logo BDE ESTIA" width="50" height="50" /></a>
+			</div>
+			<div id="head">
+				<a href="index.html">BDE ESTIA</a>
+			</div>
+			<div id="nav">
+				<nav>
+					<ul id="menu">
+						<li class="menuitem"><a href="index.html">Accueil</a></li>
+						<li class="menuitem">Goodies</li>
+						<li class="menuitem">Évenements</li>
+						<li class="menuitem"><a href="zaldunaks.html">Zaldunaks</a></li>
+						<li class="menuitem">Support</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="acote" id="head2" >
+				<div>
+					<div class="pan">
+						<a href="panier.html"><img src="ressources/panier-logo2.png" alt="Panier" title="Votre panier" width="40" height="40" /></a>
+					</div>
+				</div>
+				<div >
+					<div class="pan">
+						<img src="ressources/profil-logo2.png" alt="Connexion" title="Se connecter" width="40" height="40" />
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<section class="acote" id="sec">
+			<div id="panier">
+				<h2 id="titre2">Votre panier</h2>
+				<table id="tab">
+					<tr>
+						<td id="table1">Produit</td>
+						<td id="table2">Quantité</td>
+						<td id="table3">Prix Unitaire (€)</td>
+					</tr>
+					<tr>
+						<td id="table4"><h4>Polo gris</h4><a href="polo.html"><img class="zoom" src="ressources/polo.png" alt="polo ESTIA" width="150" height="150"/></a></td>
+						<td id="table5">
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</td>
+						<td id="table6">25€</td>
+					</tr>
+					<tr>
+						<td id="table7"><h4>Mug blanc</h4><a href="mug.html"><img class="zoom" src="ressources/mug.png" alt="mug noir" width="150" height="150"/></a></td>
+						<td id="table8">
+						<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</td>
+						<td id="table9">5€</td>
+					</tr>
+					<tr>
+						<td id="blank"></td>
+						<td id="blank1"></td>
+						<td id="table10">Sous-Total: 30€</td>
+					</tr>
+				</table>
+				<div id="conv1">
+					<div>
+						<a class="HSlabel" href="https://fx-rate.net/calculator/">Calculateur de devises</a>
+					</div>
+					<script type="text/javascript" src="https://fx-rate.net/converter.php?layout=horizontal&amount=1&tcolor=000000&default_pair=EUR/GBP"></script>
+				</div>
+			</div>
+			<div id="commande">
+				<form name="x" action="commande.html" method="post">
+					<input id="bouton" type="submit" value="Passer la commande" disabled>
+				</form>
+				<form class="check">
+					<input type="checkbox" id="coche1" name="cdt">J'accepte les conditions générales d'utilisation
+				</form>	
+				<form class="check">
+					<input onclick="test();" type="checkbox" name="cdt">Je signe (cliquer 2 fois)
+				</form>
+				<div id="signe">
+					<canvas id="myCanvas" width="300" height="300">
+						Si ce message s'affiche c'est que votre navigateur n'est pas capable de créer une zone de dessin
+					</canvas>
+					<button id="confirmeButton" onclick="alert('Votre signature est validée, vous pouvez procéder au paiement'),commande();">Confirmer</button>
+					
+				</div>
+			</div>						
+		</section>
+		
+		<footer>
+			<p id="valid">
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+				<a href="ressources/sitebde.pdf" target="_blank">Maquette Balsamiq</a>
+			</p>
+			
+		</footer>
+
+		<script>
+			var c=document.getElementById('myCanvas');
+			var ctx=c.getContext('2d');
+			ctx.fillStyle='#00FF00';
+			ctx.strokeRect(0,0,300,300);
+			var d=document.getElementById('confirmeButton');
+			function test(){
+				if(document.getElementById('coche1').checked)
+				{
+					if(c.style.visibility == "hidden",d.style.visibility == "hidden")
+					{
+						c.style.visibility = "visible",d.style.visibility = "visible";
+					}
+					else
+					{
+						c.style.visibility = "hidden",d.style.visibility = "hidden";
+					}
+				}	
+			}
+		</script>
+		<script>
+			var e=document.getElementById('bouton')
+			function commande(){
+				if(e.disabled==true)
+				{
+					e.disabled=false
+				}
+				else
+				{
+					e.disabled=true
+				}
+			}
+		</script>
+		<script>
+			var canvas = document.getElementById("myCanvas"); 					
+			canvas.addEventListener('mousedown', dessiner );		
+			
+			function dessiner(event){
+				canvas.addEventListener('mousemove',displaycarre);
+			}
+			
+			canvas.addEventListener('mouseup', pasDessiner ); 
+			
+			function pasDessiner(event){
+				canvas.removeEventListener('mousemove',displaycarre);
+			}
+			
+			function displaycarre(event){
+				var xoff=event.offsetX; 
+				var yoff=event.offsetY;
+				var ctx=c.getContext('2d'); 
+				ctx.fillStyle='#0000FF'; 
+				ctx.strokeRect(xoff,yoff,2,2)
+			}		
+			
+		</script>
+	</body>
+	
+</html>

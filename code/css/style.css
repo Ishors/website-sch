@@ -1,0 +1,210 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: BradleyHand, cursive;
+}
+
+div{
+	margin: 10px 5px 10px 5px;
+	padding: 5px;
+}
+
+header{
+	background-color:#E4F3F6;
+	padding:0;
+}
+
+.acote{
+	display:flex;
+}
+
+#head{
+	padding:5px;
+}
+
+#head1{
+	width:60%;
+	text-align:center;
+}
+
+#loges{
+	width:auto;
+}
+
+div#head1 a{
+	color: black;
+	text-decoration: none;
+}
+
+#head2{
+	width:20%;
+	padding:5px;
+}
+
+#head3{
+	width:20%;
+	padding:5px;
+	justify-content:flex-end;
+}
+
+.reseaux{
+	width:100%;
+	margin:0 ;
+	padding:0;
+}
+
+#bod1{
+	width:100%;
+	margin:0px;
+	border: 1px solid black;
+}
+
+#bod2{
+	width:auto;
+	margin:0px 0px 0px 5px;
+	border: 1px solid black;
+}
+	
+.middle{
+	text-align:center;
+}
+
+#titre1{
+	font-family: BradleyHand, cursive;
+	font-size:75px;
+	text-align:center;
+	padding:0px;
+	margin:20px;
+}
+
+.titre2{
+	font-size:35px;
+	padding-left:20px;
+}
+
+nav{
+	border: 3px solid black;
+	margin: 5px 15%;
+	padding: 15px;
+	background-color:white;
+}
+
+object{
+	margin: 0px;
+	width:100%;
+}
+
+ul#menu{
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+}
+
+ul#menu li.menuitem{
+	padding:10px 10px;
+	display:inline;
+}
+
+ul#menu li.menuitem a{
+	color: black;
+	text-decoration: none;
+}
+ul#menu li.menuitem a:hover{
+	text-decoration:underline;
+}
+
+#accueil{
+	text-decoration:underline;
+}
+
+#photos{
+	padding:0px;
+	margin:0px 50px;
+}
+
+.zoom{
+	transition: transform 1s;
+}
+
+.zoom:hover{ 
+    transform: scale(1.5);
+}
+
+
+#polo{
+	margin:70px 5px 5px 5px;
+}
+
+#valid{
+	text-align:center;
+}
+
+@media screen and (max-width :1000px){
+section.acote{
+	display:block;
+}
+
+#bod1{
+	width:auto;
+}
+
+#bod2{
+	width:auto;
+}
+
+#titre1{
+	font-family: BradleyHand, cursive;
+	font-size:50px;
+	text-align:center;
+	padding:0px;
+	margin:10px;
+}
+
+#loges{
+	width:150px;
+	height:120px;
+}
+}
+@media screen and (max-width :650px){
+#head2{
+	display:block;
+}
+
+#loges{
+	width:80px;
+	height:60px;
+}
+
+.log{
+	width:25px;
+	height:25px;
+}
+
+#head3{
+	display:block;
+}
+
+#titre1{
+	font-family: BradleyHand, cursive;
+	font-size:35px;
+	text-align:center;
+	padding:0px;
+	margin:10px;
+}
+
+nav{
+
+	border: 2px solid black;
+	margin: 15px 10px 15px 10px;
+	margin: 15px 10px 15px 10px;
+	background-color:white;
+	font-size:13px;
+}
+
+header div.acote#head3{
+	width:auto;
+	display:block;
+	padding:5px;
+}
+
+}
